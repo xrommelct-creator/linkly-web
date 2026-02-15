@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES3SA2 | Linkly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --accent-primary: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+        }
+
+        /* Definición de la Animación Fade-In */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            /* Aplicamos la animación al contenedor principal */
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid var(--card-bg);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: var(--text-dim);
+            margin-top: 8px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 18px 24px;
+            border-radius: 14px;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .featured {
+            background: var(--accent-primary);
+            box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.3);
+            border: none;
+        }
+
+        .link-card:hover {
+            transform: scale(1.02);
+            filter: brightness(1.2);
+        }
+
+        .coming-soon {
+            background-color: transparent;
+            border: 1px dashed var(--text-dim);
+            opacity: 0.4;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        footer {
+            margin-top: 80px;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://via.placeholder.com/150" alt="Avatar" class="avatar">
+        
+        <h1>ES3SA2</h1>
+        <p class="description">Bienvenido a mi BioLink oficial. <br> Conéctate conmigo en mis redes.</p>
+
+        <div class="links-container">
+            <a href="https://discord.gg/eZ7uauBkrd" class="link-card featured" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-discord"></i> Mi Comunidad Discord
+            </a>
+
+            <a href="https://www.tiktok.com/@es3sa2s?_r=1&_t=ZS-93wPCeWdDtv" class="link-card" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-tiktok"></i> Sígueme en TikTok
+            </a>
+
+            <a href="#" class="link-card coming-soon">
+                <i class="fa-solid fa-lock"></i> Próximamente...
+            </a>
+
+            <a href="#" class="link-card coming-soon">
+                <i class="fa-solid fa-lock"></i> Próximamente...
+            </a>
+        </div>
+
+        <footer>
+            &copy; 2026 Designed by Linkly
+        </footer>
+    </div>
+
+</body>
+</html>
